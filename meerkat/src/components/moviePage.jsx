@@ -1,21 +1,29 @@
 import React from 'react';
 import YouTube from 'react-youtube';
  
-class ShoppingList extends React.Component {
+class Example extends React.Component {
     render() {
-      return (
-        <div className="shopping-list">
-          <h1>Shopping List for {this.props.name}</h1>
-          <ul>
-            <li>Instagram</li>
-            <li>WhatsApp</li>
-            <li>Oculus</li>
-          </ul>
-        </div>
-      );
+      const opts = {
+        height: '390',
+        width: '640',
+        playerVars: {
+          // https://developers.google.com/youtube/player_parameters
+          autoplay: 1,
+        },
+      };
+   
+      return <YouTube 
+        videoId="Njq4A5DAqRw" opts={opts} 
+        // onReady={this._onReady} 
+      />;
     }
-}
+   
+    _onReady(event) {
+      // access to player in all event handlers via event.target
+      event.target.pauseVideo();
+    }
+  }
   
   
 
-export default ShoppingList
+export default Example

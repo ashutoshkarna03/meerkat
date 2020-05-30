@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
-import ShoppingList from './components/moviePage'
+import Example from './components/moviePage'
 
 class App extends Component {
   render() {
@@ -9,7 +9,7 @@ class App extends Component {
         <div className="App-header">
           <h2>Welcome to Meerkat</h2>
         </div>
-        <ShoppingList name="Ashutosh" />
+        <Example />
       </div>
     );
   }
